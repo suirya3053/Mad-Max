@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Toggle Image</title>
+  <style>
+    img {
+      height: 200px;
+      width: 200px;
+      margin-left: 550px;
+    }
+    button {
+      margin-left: 600px;
+      background-color: red;
+      color: white;
+      border: none;
+      padding: 5px;
+      cursor: pointer;
+      border-radius: 20px;
+      width: 100px;
+    }
+    button:hover {
+      background-color: blue;
+    }
+    body {
+      background-color: aqua;
+    }
+  </style>
+  <script>
+    let toggle = true;
+
+    function mad() {
+      const img = document.getElementById("myImage");
+      if (toggle) {
+        img.src = "stack-of-men-shirt-free-photo.jpg"; // Path to second image
+      } else {
+        img.src = "vivo-v17-pakistan-priceoye-8zdc1.jpg"; // Path to original image
+      }
+      toggle = !toggle; // Flip the state
+    }
+  </script>
+</head>
+<body>
+  <img id="myImage" src="vivo-v17-pakistan-priceoye-8zdc1.jpg" alt="Vivo"><br>
+  <button onclick="mad()"><h3>CHANGE</h3></button>
+</body>
+</html>
