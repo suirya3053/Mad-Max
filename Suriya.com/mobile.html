@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login with Mobile</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: linear-gradient(to right, #74ebd5, #acb6e5);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .container {
+      background-color: white;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+      width: 100%;
+      max-width: 400px;
+    }
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+    }
+    .form-group {
+      margin-bottom: 20px;
+    }
+    .form-group input, .form-group button {
+      width: 100%;
+      padding: 12px;
+      font-size: 16px;
+      border-radius: 8px;
+    }
+    .form-group input {
+      border: 1px solid #ccc;
+    }
+    .form-group button {
+      background-color: #5c67f2;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    .form-group button:hover {
+      background-color: #434ed2;
+    }
+    .error, .success {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .error { color: red; }
+    .success { color: green; }
+
+    /* Mobile responsiveness */
+    @media (max-width: 480px) {
+      .container {
+        padding: 20px;
+        margin: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>Login with Mobile</h2>
+    <div class="form-group">
+      <input type="text" id="mobile" placeholder="Enter mobile number" maxlength="10">
+    </div>
+    <div class="form-group">
+      <button onclick="sendOTP()"> <a href=""></a> Get OTP</button>
+    </div>
+    <div id="message"></div>
+  </div>
+
+  <script>
+    function sendOTP() {
+      const mobile = document.getElementById("mobile").value.trim();
+      const message = document.getElementById("message");
+
+      if (mobile === "" || mobile.length !== 10 || isNaN(mobile)) {
+        message.innerHTML = "<p class='error'>Enter a valid 10-digit mobile number.</p>";
+        return;
+      }
+
+      // Save to local storage or pass via URL
+      localStorage.setItem("mobile", mobile);
+      window.location.href = "otp.html"; // Go to OTP page
+    }
+  </script>
+</body>
+</html>

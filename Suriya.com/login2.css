@@ -1,0 +1,202 @@
+.box3 {
+    background-color: rgb(255, 255, 255);
+    height: 370px;
+    width: 200px;
+    margin-left: 50px;
+    margin-top: 50px;
+    cursor: pointer;
+    margin-left: 100px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    
+    
+}
+.box3:hover{
+    transform: scale(1.1);
+}
+
+.lu {
+    display: flex;
+    margin-left: 20px;
+
+
+}
+
+.co {
+    height: 20px;
+
+    background-color: rgb(179, 226, 255);
+    width: 150px;
+
+    border-radius: 5px;
+    margin-left: 28px;
+
+
+
+
+}
+
+
+
+
+
+
+
+
+.side {
+    display: flex;
+}
+
+body {
+    background-color: #ffffff;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+
+}
+
+.btn1 {
+    margin-left: 90%;
+    margin-top: 2px;
+    padding: 5px;
+    border-radius: 5px;
+    border: none;
+    background-color: lightpink;
+
+}
+
+.ser {
+    margin-left: 40%;
+    margin-top: 10px;
+
+}
+
+input {
+    width: 300px;
+    padding: 10px;
+    border-radius: 10px;
+    border: none;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 1);
+}
+
+.by {
+    background-color: lawngreen;
+    height: 30px;
+    width: 150px;
+   
+    cursor: pointer;
+}
+
+.cart {
+    background-color: rgb(2, 2, 2);
+    height: 30px;
+    width: 150px;
+    
+    margin-top: 5px;
+    color: #ffffff;
+    cursor: pointer;
+
+}
+
+.para {
+    color: black;
+}
+.tim1{
+    background-color: orange;
+    height: 70px;
+    width: 200px;
+    
+    
+    
+
+}
+h3{
+    text-align: center;
+    padding-top: 8px;
+    color: white;
+}
+.tim2{
+    background-color: rgb(202, 52, 7);
+    height: 70px;
+    width: 200px;
+    
+    }
+    .tim3{
+        
+        display: flex;
+    }
+.img1{
+    border: solid 1px red;
+}
+.rrr{
+    display: flex ;
+}
+
+@media (max-width: 768px) {
+    .box3 {
+        width: 90%;
+        height: auto;
+        margin: 20px auto;
+    }
+
+    .lu {
+        flex-direction: column;
+        margin-left: 0;
+    }
+
+    .co {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .side {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .btn1 {
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        width: 100px;
+    }
+
+    .ser {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    input {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .by,
+    .cart {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .tim1,
+    .tim2 {
+        width: 80%;
+        margin: 10px auto;
+    }
+
+    .tim3 {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .img1 {
+        width: 100%;
+        height: auto;
+        border: solid 1px red;
+    }
+
+    .rrr {
+        flex-direction: column;
+        align-items: center;
+    }
+}
